@@ -1,7 +1,7 @@
 module.exports = {
-  TraceId: 'X-B3-TraceId',
-  SpanId: 'X-B3-SpanId',
-  ParentSpanId: 'X-B3-ParentSpanId',
-  Sampled: 'X-B3-Sampled',
-  Flags: 'X-B3-Flags'
+  TraceId: 'x-b3-traceid',
+  SpanId: 'x-b3-spanid',
+  ParentSpanId: 'x-b3-parentspanid',
+  Sampled: 'x-b3-sampled',
+  Flags: 'x-b3-flags'
 };
