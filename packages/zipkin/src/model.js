@@ -15,7 +15,7 @@ Endpoint.prototype.setPort = function setPort(port) {
 };
 Endpoint.prototype.isEmpty = function isEmpty() {
   return this.serviceName === undefined &&
-         this.ipv4 === undefined && this.port === undefined;
+    this.ipv4 === undefined && this.port === undefined;
 };
 
 function Annotation(timestamp, value) {

@@ -126,7 +126,7 @@ describe('HTTP transport - integration test', () => {
 
   it('should emit an error when payload size is too large', function(done) {
     const self = this;
-    const app = mockPublisher(() => {});
+    const app = mockPublisher(() => { });
 
     const maxPayloadSize = 1024;
     self.server = app.listen(0, () => {
@@ -181,7 +181,7 @@ describe('HTTP transport - integration test', () => {
 
   it('should emit an error when an error listener is set', function(done) {
     const self = this;
-    const app = mockPublisher(() => {});
+    const app = mockPublisher(() => { });
 
     self.server = app.listen(0, () => {
       self.port = self.server.address().port;
@@ -199,7 +199,7 @@ describe('HTTP transport - integration test', () => {
 
   it('should log if an error listener is not set', function(done) {
     const self = this;
-    const app = mockPublisher(() => {});
+    const app = mockPublisher(() => { });
 
     // if an error was emitted then this works
     const log = {error: () => self.server.close(done)};
@@ -219,7 +219,7 @@ describe('HTTP transport - integration test', () => {
 
   it('should accept a 200 response from the server', function(done) {
     const self = this;
-    const app = mockPublisher(() => {});
+    const app = mockPublisher(() => { });
 
     this.server = app.listen(0, () => {
       this.port = this.server.address().port;

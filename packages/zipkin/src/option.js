@@ -8,7 +8,7 @@ const None = {
   map() {
     return this;
   },
-  ifPresent() {},
+  ifPresent() { },
   flatMap() {
     return this;
   },
