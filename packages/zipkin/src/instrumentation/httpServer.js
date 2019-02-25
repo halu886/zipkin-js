@@ -56,6 +56,14 @@ class HttpServerInstrumentation {
             flags
           });
         });
+        console.log('createId', 5);
+        console.log('createId', this.tracer.supportsJoin, JSON.stringify(!this.tracer.supportsJoin
+          ? parentId.map(id =>
+            this.tracer.letId(id, () =>
+              this.tracer.createChildId()
+            )
+          )
+          : parentId));
         return !this.tracer.supportsJoin
           ? parentId.map(id =>
             this.tracer.letId(id, () =>
@@ -64,13 +72,14 @@ class HttpServerInstrumentation {
           )
           : parentId;
       } else {
-        console.log('createId', 1);
+        console.log('createId', 2);
         if (readHeader(Header.Flags) !== None || readHeader(Header.Sampled) !== None) {
           const sampled = readHeader(Header.Sampled) === None ?
             None : readHeader(Header.Sampled).map(stringToBoolean);
           const flags = readHeader(Header.Flags).flatMap(stringToIntOption).getOrElse(0);
           return new Some(this.tracer.createRootId(sampled, flags === 1));
         } else {
+          console.log('createId', 3);
           return new Some(this.tracer.createRootId());
         }
       }
