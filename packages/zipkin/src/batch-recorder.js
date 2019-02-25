@@ -80,7 +80,7 @@ class BatchRecorder {
   }
 
   record(rec) {
-    console.log(JSON.stringify(rec));
+    console.log('record', JSON.stringify(rec));
     const id = rec.traceId;
 
     this._updateSpanMap(id, span => {
