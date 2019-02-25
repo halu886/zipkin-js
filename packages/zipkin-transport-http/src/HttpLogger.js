@@ -8,7 +8,7 @@ const fetch = globalFetch || require('node-fetch');
 
 const {
   jsonEncoder: {JSON_V1}
-} = require('zipkin');
+} = require('@icoastline/zipkin');
 
 const EventEmitter = require('events').EventEmitter;
 

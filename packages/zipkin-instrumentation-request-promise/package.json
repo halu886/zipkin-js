@@ -1,6 +1,6 @@
 {
-  "name": "zipkin-instrumentation-request-promise",
-  "version": "0.16.1",
+  "name": "@icoastline/zipkin-instrumentation-request-promise",
+  "version": "0.16.2",
   "description": "Instrumentation for request-promise with Zipkin.js",
   "main": "lib/request.js",
   "scripts": {

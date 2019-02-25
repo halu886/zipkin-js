@@ -1,4 +1,4 @@
-const {option: {Some, None}, Instrumentation} = require('zipkin');
+const {option: {Some, None}, Instrumentation} = require('@icoastline/zipkin');
 const url = require('url');
 
 /**
@@ -39,6 +39,7 @@ module.exports = function expressMiddleware({tracer, serviceName, port = 0}) {
    */
   return function zipkinExpressMiddleware(req, res, next) {
     function readHeader(header) {
+      console.log(header);
       const val = req.header(header);
       if (val != null) {
         return new Some(val);
