@@ -56,6 +56,7 @@ class BatchRecorder {
       spanToWrite.setTimestamp(span.startTimestamp);
       spanToWrite.setDuration(span.endTimestamp - span.startTimestamp);
     }
+    console.log('spanToWrite', JSON.stringify(spanToWrite));
     this.logger.logSpan(spanToWrite);
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "@icoastline/zipkin",
-  "version": "0.16.5",
+  "version": "0.16.6",
   "description": "The core tracer for zipkin.js",
   "main": "lib/index.js",
   "unpkg": "dist/zipkin.js",

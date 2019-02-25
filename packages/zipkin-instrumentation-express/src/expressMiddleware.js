@@ -39,8 +39,8 @@ module.exports = function expressMiddleware({tracer, serviceName, port = 0}) {
    */
   return function zipkinExpressMiddleware(req, res, next) {
     function readHeader(header) {
-      console.log(header);
       const val = req.header(header);
+      console.log(header, val);
       if (val != null) {
         return new Some(val);
       } else {
